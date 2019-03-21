@@ -23,6 +23,7 @@
   "homepage": "https://github.com/jefbsousa/scraping_cars#readme",
   "dependencies": {
     "csv-write-stream": "^2.0.0",
+    "jssoup": "0.0.10",
     "puppeteer": "^1.12.2"
   }
 }
