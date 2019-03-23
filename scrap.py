@@ -47,7 +47,7 @@ for i in range(step-1, len(lst)+step , step):
             else:
                 write_html(_res.content, n, _res.url)
         else:
-            failed.append(_res.url)
+            pass
     n += 1
     print(time()-st, i ,'\n')
     
