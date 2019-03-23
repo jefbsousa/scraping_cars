@@ -1,7 +1,9 @@
 *.log
 *.pyc
+.ipynb_checkpoints
 */*/*/__pycache__/
 */*/__pycache__/
 */__pycache__/
 */node_modules/
 node_modules/*
+results/*
