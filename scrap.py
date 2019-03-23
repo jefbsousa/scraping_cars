@@ -6,7 +6,7 @@ from time import sleep, time
 
 df = pd.read_csv('links_py.txt', header=None)
 lst = df[0].tolist()
-lst = lst[:50]
+lst = lst[:]
 
 class Test():
     def __init__(self, sublst, size):
@@ -46,7 +46,7 @@ for i in range(step-1, len(lst)+step , step):
         else:
             write_html(_res.content, n, _res.url)
     n += 1
-    print(time()-st,'\n')
+    print(time()-st, i ,'\n')
     
 #     print(lst[i-step+1:i+1])
 
