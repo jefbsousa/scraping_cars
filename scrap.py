@@ -22,7 +22,7 @@ class Test():
 
 
 
-step = 20
+step = 10
 all_r, failed = [], []
 
 def write_html(html, n, url):
