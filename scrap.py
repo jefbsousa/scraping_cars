@@ -30,7 +30,7 @@ def write_html(html, n, url):
     end = url.find('/overview/')
     _id = url[st+len('/detail/'):end]
     
-    with open(f'/home/jeferson/personal_projects/scraping_cars/results/ny/{n}-{_id}', 'wb') as f:
+    with open('/home/jeferson/personal_projects/scraping_cars/results/ny/{}-{}'.format(n, _id), 'wb') as f:
         f.write(html)
     
 n = 0
@@ -41,10 +41,13 @@ for i in range(step-1, len(lst)+step , step):
     res = test_inst.async_req()
     print(res)
     for _res in res:
-        if _res.status_code != 200:
-            failed.append(_res.url)
+        if _res:
+            if _res.status_code != 200:
+                failed.append(_res.url)
+            else:
+                write_html(_res.content, n, _res.url)
         else:
-            write_html(_res.content, n, _res.url)
+            pass
     n += 1
     print(time()-st, i ,'\n')
     
