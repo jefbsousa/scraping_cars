@@ -4,8 +4,9 @@ import os, re
 from time import sleep, time
 
 
-df = pd.read_csv('links_py.txt', header=None)
+df = pd.read_csv('links_alabama.txt', header=None)
 lst = df[0].tolist()
+print(len(lst))
 lst = lst[:]
 
 class Test():
