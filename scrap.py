@@ -31,7 +31,7 @@ def write_html(html, n, url):
     end = url.find('/overview/')
     _id = url[st+len('/detail/'):end]
     
-    with open('/home/jeferson/personal_projects/scraping_cars/results/ny/{}-{}'.format(n, _id), 'wb') as f:
+    with open('/home/jeferson/personal_projects/scraping_cars/results/al/{}-{}'.format(n, _id), 'wb') as f:
         f.write(html)
     
 n = 0
